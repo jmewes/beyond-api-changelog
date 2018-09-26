@@ -1,5 +1,17 @@
 = Beyond API Changelog
 
+== 2018-09-26 18:17:32
+
+|===
+|Type |Description
+
+|delete-path
+|/orders/{order-id}/processes/payments/active - Deleted
+
+|add-path
+|/shipping-zones/search/find-all-serviceable-countries - Added
+|===
+
 == 2018-09-26 18:14:55
 
 |===

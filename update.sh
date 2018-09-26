@@ -10,9 +10,8 @@ if [[ $? -eq 1 ]]; then
     PREVIOUS_API_SPEC_FILE=$(mktemp)
     git show HEAD:${API_SPEC_FILE} > ${PREVIOUS_API_SPEC_FILE}
 
-    ./update-change-log.sh -o ${PREVIOUS_API_SPEC_FILE} -n ${PREVIOUS_API_SPEC_FILE} -c ${CHANGE_LOG_FILE}
+    ./prepend-diff-description.sh -o ${PREVIOUS_API_SPEC_FILE} -n ${API_SPEC_FILE} -c ${CHANGE_LOG_FILE}
 
     git add .
     git commit -m "Update change log"
-    git push
 fi
