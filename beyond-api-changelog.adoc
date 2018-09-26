@@ -1,5 +1,14 @@
 = Beyond API Changelog
 
+== 2018-09-26 18:29:51
+
+|===
+|Type |Description
+
+|edit-summary
+|/add-ons/installed (get) - Summary turned from List App Installations xxxx to List App Installations
+|===
+
 == 2018-09-26 17:25:53
 
 |===
