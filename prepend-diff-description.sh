@@ -50,17 +50,21 @@ if [[ -z ${CHANGE_LOG_FILE} ]]; then
     exit 1
 fi
 
+################################################################################
 # Calculate diff
+################################################################################
 DIFF_FILE=$(mktemp)
 ./node_modules/.bin/swagger-diff --outformat=json --outfile=${DIFF_FILE} ${OLD_API_SPEC_FILE} ${NEW_API_SPEC_FILE}
 
+################################################################################
 # Build change log snippet
+################################################################################
 CURRENT_DATE_AND_TIME=$(date '+%Y-%m-%d %H:%M:%S')
 CHANGE_LOG_HEADING="== ${CURRENT_DATE_AND_TIME}"
 CHANGE_LOG_TABLE_ROWS=$(cat ${DIFF_FILE} | jq -r '.[] | .[] | "|" + .ruleId + "\n" + "|" + .message + "\n"')
 CHANGE_LOG_TABLE=$(cat <<EOF
 |===
-|Type |Description
+|Change |Description
 
 ${CHANGE_LOG_TABLE_ROWS}
 |===
@@ -68,11 +72,15 @@ EOF
 )
 CHANGE_LOG="\n${CHANGE_LOG_HEADING}\n\n${CHANGE_LOG_TABLE}\n"
 
+################################################################################
 # Insert change log
+################################################################################
 ESCAPED_CHANGE_LOG=$(echo -e "${CHANGE_LOG}" | sed -e 's/[\/&|]/\\&/g')
 CHANGE_LOG_PLACEHOLDER="###CHANGE_LOG_HERE###"
 sed -i "/= Beyond API Changelog/ a ${CHANGE_LOG_PLACEHOLDER}" ${CHANGE_LOG_FILE}
 perl -pi -e "s/${CHANGE_LOG_PLACEHOLDER}/${ESCAPED_CHANGE_LOG}/g" ${CHANGE_LOG_FILE}
 
+################################################################################
 # Cleanup
+################################################################################
 rm ${DIFF_FILE}

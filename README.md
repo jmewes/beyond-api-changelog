@@ -1,30 +1,31 @@
-# beyond-api-changelog
-Technical diff of the OpenAPI specification of the Beyond API
+# Beyond API Change Log
+
+Generated description of changes in the ePages Beyond API.
+
+## Usage
+
+In order to insert the latest changes into the change log, just call the update
+script and then push the changes to GitHub.
+
+```
+./update.sh
+git push
+```
 
 ## Dependencies
+
+Before you do so, make sure that the following tools are installed:
 
 - git
 - jq
 - GNU core utils
 - node
 
-## Development
+## OpenAPI diff generation
 
-```
-npm install swagger-diff
-```
+The API diff generation is based upon the NPM package [swagger-diff](https://www.npmjs.com/package/swagger-diff).
+Other options might be:
 
-https://www.npmjs.com/package/swagger-diff
-
-## Generate diff
-
-```
-git show HEAD:openapi.yaml > /tmp/openapi-old.yaml
-
-./node_modules/.bin/swagger-diff --outformat=json --outfile=diff.json /tmp/openapi-old.yaml openapi.yaml
-```
-
-## Other options
 - https://bitbucket.org/atlassian/openapi-diff
 - https://javalibs.com/artifact/com.deepoove/swagger-diff
 - https://swagger.io/blog/api-development/using-swagger-to-detect-breaking-api-changes/

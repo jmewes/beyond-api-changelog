@@ -12,7 +12,7 @@
 == 2018-09-26 18:29:51
 
 |===
-|Type |Description
+|Change |Description
 
 |edit-summary
 |/add-ons/installed (get) - Summary turned from List App Installations xxxx to List App Installations
