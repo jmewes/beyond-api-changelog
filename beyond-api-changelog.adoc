@@ -1,5 +1,14 @@
 = Beyond API Changelog
 
+== 2018-09-26 18:32:08
+
+|===
+|Type |Description
+
+|add-path
+|/ - Added
+|===
+
 == 2018-09-26 18:29:51
 
 |===

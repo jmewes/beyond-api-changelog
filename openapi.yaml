@@ -8,6 +8,20 @@ basePath: "/api"
 schemes:
 - "https"
 paths:
+  /:
+    get:
+      summary: "Index Unauthorized"
+      description: ""
+      operationId: "index-unauthorized"
+      produces:
+      - "application/json"
+      responses:
+        401:
+          description: ""
+          examples:
+            application/json: "{\"errorId\":\"unauthorized\",\"details\":{},\"message\"\
+              :\"Full authentication is required to access this resource\",\"traceId\"\
+              :null}"
   /add-ons/installed:
     get:
       tags:
