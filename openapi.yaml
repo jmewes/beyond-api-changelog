@@ -8,53 +8,6 @@ basePath: "/api"
 schemes:
 - "https"
 paths:
-  /:
-    get:
-      summary: "Index Unauthorized"
-      description: ""
-      operationId: "index-unauthorized"
-      produces:
-      - "application/json"
-      responses:
-        401:
-          description: ""
-          examples:
-            application/json: "{\"errorId\":\"unauthorized\",\"details\":{},\"message\"\
-              :\"Full authentication is required to access this resource\",\"traceId\"\
-              :null}"
-  /add-ons/installed:
-    get:
-      tags:
-      - "add-ons"
-      summary: "List App Installations"
-      description: ""
-      operationId: "add-on-installations"
-      produces:
-      - "application/hal+json"
-      responses:
-        200:
-          description: ""
-          examples:
-            application/hal+json: "{\n  \"_embedded\" : {\n    \"add-ons\" : [ {\n\
-              \      \"_id\" : \"789c8f83-3816-41af-97ef-1e061d5e35c2\",\n      \"\
-              name\" : \"Better App\",\n      \"scopes\" : [ \"prod:r\", \"prod:c\"\
-              \ ],\n      \"_links\" : {\n        \"self\" : {\n          \"href\"\
-              \ : \"https://yourshop.api.urn/add-ons/installed/789c8f83-3816-41af-97ef-1e061d5e35c2\"\
-              \n        }\n      }\n    }, {\n      \"_id\" : \"db243fc2-a6a0-4c06-b548-5c5fc78b9be7\"\
-              ,\n      \"name\" : \"Awesome App\",\n      \"scopes\" : [ \"prod:r\"\
-              \ ],\n      \"_links\" : {\n        \"self\" : {\n          \"href\"\
-              \ : \"https://yourshop.api.urn/add-ons/installed/db243fc2-a6a0-4c06-b548-5c5fc78b9be7\"\
-              \n        }\n      }\n    } ]\n  },\n  \"_links\" : {\n    \"self\"\
-              \ : {\n      \"href\" : \"https://yourshop.api.urn/add-ons/installed\"\
-              \n    }\n  },\n  \"page\" : {\n    \"size\" : 10,\n    \"totalElements\"\
-              \ : 2,\n    \"totalPages\" : 1,\n    \"number\" : 0\n  }\n}"
-          schema:
-            $ref: "#/definitions/products_productId_attributes_namespace-1206450827"
-      security:
-      - oauth2_accessCode:
-        - "adon:r"
-      - oauth2_application:
-        - "adon:r"
   /add-ons/installed/{id}:
     delete:
       tags:
