@@ -1,1 +1,13 @@
 = Beyond API Changelog
+
+== 2018-09-26
+
+|===
+|Change |Description
+
+|add-path
+|/ - Added
+
+|add-path
+|/add-ons/installed - Added
+|===
