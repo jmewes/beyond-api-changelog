@@ -358,30 +358,6 @@ paths:
           description: ""
           examples:
             application/json: "null"
-  /orders/{order-id}/processes/payments/active:
-    get:
-      summary: "Get sdfdsf Active Payment Process"
-      description: ""
-      produces:
-      - "application/hal+json"
-      parameters:
-      - name: "order-id"
-        in: "path"
-        description: ""
-        required: true
-        type: "string"
-      responses:
-        200:
-          description: ""
-          examples:
-            application/hal+json: "{\n  \"amount\" : {\n    \"currency\" : \"EUR\"\
-              ,\n    \"amount\" : 77.44\n  },\n  \"status\" : \"PENDING\",\n  \"paymentId\"\
-              \ : null,\n  \"completed\" : false,\n  \"_id\" : \"0f0f9786-e7af-42e7-ab16-1defda253d7c\"\
-              ,\n  \"_links\" : {\n    \"self\" : {\n      \"href\" : \"https://yourshop.api.urn/orders/e570380b-1528-48a5-9541-eea664b653b1/processes/payments/0f0f9786-e7af-42e7-ab16-1defda253d7c\"\
-              \n    },\n    \"payment-process\" : {\n      \"href\" : \"https://yourshop.api.urn/orders/e570380b-1528-48a5-9541-eea664b653b1/processes/payments/0f0f9786-e7af-42e7-ab16-1defda253d7c\"\
-              \n    },\n    \"mark-voided\" : {\n      \"href\" : \"https://yourshop.api.urn/orders/e570380b-1528-48a5-9541-eea664b653b1/processes/payments/0f0f9786-e7af-42e7-ab16-1defda253d7c/mark-voided\"\
-              \n    },\n    \"mark-paid\" : {\n      \"href\" : \"https://yourshop.api.urn/orders/e570380b-1528-48a5-9541-eea664b653b1/processes/payments/0f0f9786-e7af-42e7-ab16-1defda253d7c/mark-paid\"\
-              \n    }\n  }\n}"
   /users/{id}/roles:
     get:
       summary: "List User Roles"
