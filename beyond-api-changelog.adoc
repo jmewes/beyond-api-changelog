@@ -1,5 +1,23 @@
 = Beyond API Changelog
 
+== 2018-09-26 18:14:55
+
+|===
+|Type |Description
+
+|add-path
+|/shipping-zones/search/find-all-serviceable-countries - Added
+|===
+
+== 2018-09-26 18:14:35
+
+|===
+|Type |Description
+
+|add-path
+|/shipping-zones/search/find-all-serviceable-countries - Added
+|===
+
 == 2018-09-26 17:25:53
 
 |===

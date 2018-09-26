@@ -6,6 +6,7 @@ Technical diff of the OpenAPI specification of the Beyond API
 - git
 - jq
 - GNU core utils
+- node
 
 ## Development
 
