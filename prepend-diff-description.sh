@@ -54,7 +54,7 @@ fi
 # Calculate diff
 ################################################################################
 DIFF_FILE=$(mktemp)
-./node_modules/.bin/swagger-diff --outformat=json --outfile=${DIFF_FILE} ${OLD_API_SPEC_FILE} ${NEW_API_SPEC_FILE}
+./node_modules/.bin/swagger-diff --outformat=json --outfile=${DIFF_FILE} ${OLD_API_SPEC_FILE} ${NEW_API_SPEC_FILE} > /dev/null
 
 ################################################################################
 # Build change log snippet
