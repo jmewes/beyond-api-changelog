@@ -1,0 +1,18 @@
+
+
+DIFF_TABLE_ROWS=$(cat diff.json | jq -r '.[] | .[] | "|" + .ruleId + "\n" + "|" + .message + "\n"')
+
+
+
+
+DIFF_TABLE=$(cat <<EOF
+|===
+|Type |Description
+
+${DIFF_TABLE_ROWS}
+|===
+EOF
+)
+
+
+echo -e "${DIFF_TABLE}"

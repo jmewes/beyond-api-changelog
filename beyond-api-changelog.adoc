@@ -1,0 +1,14 @@
+
+= Beyond API Changelog
+
+== 2018-07-15 08:00
+
+|===
+|Type |Description
+
+|edit-summary
+|/orders/{order-id}/processes/payments/active (get) - Summary turned from Get sdfdsf Active Payment Process to Get Active Payment Process
+
+|add-path
+|/products/{productId}/images - Added
+|===
