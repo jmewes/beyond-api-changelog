@@ -1,7 +1,6 @@
-
 = Beyond API Changelog
 
-== 2018-07-15 08:00
+== 2018-09-26 17:25:53
 
 |===
 |Type |Description
