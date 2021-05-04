@@ -8,6 +8,19 @@
 
 ### What's Changed
 
+* `GET` /orders List orders  
+    Parameter
+
+        Add viewed //Filters by whether or not the order was viewed. Can be `true` or `false`.
+
+## 2021-05-04
+
+### What's New
+
+### What's Deprecated
+
+### What's Changed
+
 * `PUT` /carts/{cardId}/customer Assign customer to cart  
     Return Type
 
